@@ -1,0 +1,89 @@
+1 Open the file contact/submit.php
+
+You will find the 3rd line 
+$emailAddress = 'underpricedhost@gmail.com';
+
+Simply replace
+the email address
+with that of yours.
+
+The questions filled by visitors
+will reach to the email address 
+which you specify in this line.
+
+
+
+2 Now upload the folder /contact to your web host.
+
+
+3 Open yourdomain.com/contact in your web browser.
+That's your CONTACT US form.
+
+
+4 If you want the CONTACT US form
+to appear within any website page
+the way you see at bottom of DangerousMailer.com 
+then copy and paste the below code 
+in the html code of your website page.
+
+
+===============
+
+<script language="javascript">
+<!--
+//Specify display mode (0 or 1)
+//0 causes document to be displayed in an inline frame, while 1 in a new browser window
+var displaymode=0
+//if displaymode=0, configure inline frame attributes (ie: dimensions, intial document shown
+var iframecode='<iframe id="external" style="width:100%;height:500px" align="centre" frameborder="0" src="http://www.makebulkcalls.com/contact/"></iframe>'
+
+/////NO NEED TO EDIT BELOW HERE////////////
+
+if (displaymode==0)
+document.write(iframecode)
+
+function jumpto(inputurl){
+if (document.getElementById&&displaymode==0)
+document.getElementById("external").src=inputurl
+else if (document.all&&displaymode==0)
+document.all.external.src=inputurl
+else{
+if (!window.win2||win2.closed)
+win2=window.open(inputurl)
+//else if win2 already exists
+else{
+win2.location=inputurl
+win2.focus()
+}
+}
+}
+//-->
+             </script> 
+
+
+
+===============
+
+
+
+//
+Note : Replace the domain MakeBulkCalls.com present on 
+line 6 of above code to that of your domain.
+//
+
+
+
+
+
+5 That's all.
+For any questions please email
+underpricedhost@gmail.com
+
+
+
+
+
+Best Regards
+1 UnderPricedHost.com
+2 DangerousMailer.com
+3 MakeBulkCalls.com
