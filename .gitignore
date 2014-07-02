@@ -1,3 +1,5 @@
 *.agdai
 .proj
 .settings
+.buildpath
+.project
