@@ -45,3 +45,4 @@ http://gmailrampage.com<br/>
 EOD;
 
 $config['dm_user_forgot_email_template'] = $userforgotemail;
+
