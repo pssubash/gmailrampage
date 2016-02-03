@@ -17,6 +17,14 @@
 					</ul>
 				</li>
 				<?php } ?>
-				
+				<li class="upp"><a href="#">SMTP List</a>
+					<ul>
+						<li>&#8250; <a href="<?php echo base_url()?>index.php/smtpservers/index">List All </a></li>
+						<li>&#8250; <a href="<?php echo base_url()?>index.php/smtpservers/edit">Add New Smtp </a></li>
+						<li>&#8250; <a href="<?php echo base_url()?>index.php/smtpservers/import">Import </a></li>
+						
+						
+					</ul>
+				</li>
 			</ul>
 </div>
