@@ -1,5 +1,5 @@
 <?php
-define("COST_PER_VALID_EMAIL", 0.0001);//Cost Price per Valid email address
+define("COST_PER_VALID_EMAIL", '0.0001');//Cost Price per Valid email address
 define("PAYPAL_EMAIL","underpri@underpricedhost.com");//Paypal email address
 define("ALERT_EMAIL", "underpricedhost@gmail.com");
 define("ALERT_EMAIL_SUBJECT","DM Generate Count : Letter <<<letter>>>");
@@ -19,6 +19,7 @@ define('AD_SMTP_PORT','25');
 define('AD_SMTP_USER','noreply@gmailrampage.com');
 define('AD_SMTP_PWD','adminkerala');
 
+define("PAYPAL_IMG_SRC", "https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-small.png");
 $emailConfig = array ();
 $emailConfig['protocol'] = 'smtp';
 $emailConfig['smtp_host'] = AD_SMTP_HOST;

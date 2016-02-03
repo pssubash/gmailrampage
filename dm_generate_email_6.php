@@ -125,7 +125,7 @@ function changeall($string, $char, $start = 0, $end = 0) {
 	return $string;
 }
 
-$array = permutations ( "johnab", 6 ); // Set your permutaion here
+$array = permutations ( "abcdefghijklmnopqrstuvwxyz1234567890", 6 ); // Set your permutaion here
 
 $mailBody = "<html>";
 $mailBody .= "<body>";

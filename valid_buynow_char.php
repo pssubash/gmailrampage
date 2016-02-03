@@ -10,9 +10,9 @@ $str = "<table width='85%' class='buyvalidemails'>";
 	$str .= "<th>Total Valid</th>";
 	$str .= "<th>Cost per email address</th>";
 	$str .= "<th>Total Cost</th>";
-	$str .= "<th>Order</th>";
-	$str .= "<th>Downloaded So far</th>";
 	
+	$str .= "<th>Downloaded So far</th>";
+	$str .= "<th>Order</th>";
 	$str .= "</tr>";
 	$vtotalcount = 0;
 	$vtotalcost = 0;
@@ -49,9 +49,9 @@ $str = "<table width='85%' class='buyvalidemails'>";
 		$str .= "<td>" . number_format($vcount) . "</td>";
 		$str .= "<td>$" . number_format($vcost,3,'.',',') . "</td>";
 		$str .= "<td>$" . number_format ( $vcost*$vcount, 3, '.', ',' ) . "</td>";
-		$str .= "<td><input type='image'  class='class_buynow_char'  id='buynow_".$vcount."_".$lettercount."_".$vcost."_".$charArray [$search]."' src='http://dangerousmailer.com/images/paypal_buy.gif' border='0' name='I1' alt='Make payments with PayPal - it\'s fast, free and secure!' width='137' height='57'>
-								<img alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1'></td>";
 		$str .="<td>".getDownloadCounter($charArray [$search]."C")."</td>";
+		$str .= "<td><a href='javascript:void(0);'  class='class_buynow_char'  id='buynow_".$vcount."_".$lettercount."_".$vcost."_".$charArray [$search]."'  border='0' name='I1' alt='Make payments with PayPal - it\'s fast, free and secure!' width='137' height='57'>ORDER BY PAYPAL</a>
+								<img alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1'></td>";
 		
 		$str .= "</tr>";
 	}
@@ -63,9 +63,9 @@ $str = "<table width='85%' class='buyvalidemails'>";
 	$str .= "<td>" . number_format($vtotalcount) . "</td>";
 	$str .= "<td>$" .  number_format($vcost,2,'.',',') . "</td>";
 	$str .= "<td>$" . number_format($vtotalcount*$vcost,3,'.',',') . "</td>";
-	$str .= "<td><input type='image' src='http://dangerousmailer.com/images/paypal_buy.gif' class='class_buynow'  id='buynow_".$vtotalcount."_All Letter_".$vtotalcost."' border='0' name='I1' alt='Make payments with PayPal - it\'s fast, free and secure!' width='137' height='57'>
-							<img alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1'></td>";
 	$str .="<td>".getDownloadCounter("CA")."</td>";
+	$str .= "<td><a href='javascript:void(0);' class='class_buynow'  id='buynow_".$vtotalcount."_All Letter_".$vcost."' border='0' name='I1' alt='Make payments with PayPal - it\'s fast, free and secure!' width='137' height='57'>ORDER BY PAYPAL</a>
+							<img alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1'></td>";
 	
 	$str .= "</tr>";
 	

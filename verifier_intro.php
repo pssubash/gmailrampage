@@ -148,7 +148,7 @@ for($lettercount = START_LETTER_COUNT; $lettercount <= END_LETTER_COUNT; $letter
 	
 	$str .= "<td>$" . number_format ( $vcost, 3, '.', ',' ) . "</td>";
 	$str .= "<td>$" . number_format ( $vcost * $vtotalcount, 2, '.', ',' ) . "</td>";
-	$str .= "<td><input type='image' class='class_buynow'  id='buynow_" . $vtotalcount . "_All Letter_" . $vtotalcost . "' src='http://dangerousmailer.com/images/paypal_buy.gif' border='0' name='I1' alt='Make payments with PayPal - it\'s fast, free and secure!' width='137' height='57'>
+	$str .= "<td><input type='image' class='class_buynow'  id='buynow_" . $vtotalcount . "_All Letter_" . $vcost . "' src='http://dangerousmailer.com/images/paypal_buy.gif' border='0' name='I1' alt='Make payments with PayPal - it\'s fast, free and secure!' width='137' height='57'>
 							<img alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1'></td>";
 	$str .="<td>".getDownloadCounter("PA")."</td>";
 	$str .= "</tr>";
@@ -166,7 +166,7 @@ for($lettercount = START_LETTER_COUNT; $lettercount <= END_LETTER_COUNT; $letter
 ALL CHARACTERS | 
 OFFER PRICE - <?php echo '$'.OFFER_PRICE?>   <input type='image' src='http://dangerousmailer.com/images/paypal_buy.gif' class='offer_buy_now'  id='jdsfjdfh'  name='I1' alt="Make payments with PayPal - its fast, free and secure!" width='137' height='57' style="border:none;"/>
 							<img alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1'> 
-							<span id='span_offer_count'><?php echo getOfferDownloadCounter ();?></span>
+							<span id='span_offer_count'><?php echo getOfferDownloadCounter ();?> people clicked so far</span>
 							</p>
 
 
@@ -235,7 +235,7 @@ OFFER PRICE - <?php echo '$'.OFFER_PRICE?>   <input type='image' src='http://dan
 	$str .= "<td>" . number_format ( $vtotalcount ) . "</td>";
 	$str .= "<td>$" . number_format ( $vcost, 2, '.', ',' ) . "</td>";
 	$str .= "<td>$" . number_format ( $vtotalcount * $vcost, 3, '.', ',' ) . "</td>";
-	$str .= "<td><input type='image' src='http://dangerousmailer.com/images/paypal_buy.gif' class='class_buynow'  id='buynow_" . $vtotalcount . "_All Letter_" . $vtotalcost . "' border='0' name='I1' alt='Make payments with PayPal - it\'s fast, free and secure!' width='137' height='57'>
+	$str .= "<td><input type='image' src='http://dangerousmailer.com/images/paypal_buy.gif' class='class_buynow'  id='buynow_" . $vtotalcount . "_All Letter_" . $vcost . "' border='0' name='I1' alt='Make payments with PayPal - it\'s fast, free and secure!' width='137' height='57'>
 							<img alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1'></td>";
 	$str .="<td>".getDownloadCounter("CA")."</td>";
 	$str .= "</tr>";
@@ -251,7 +251,7 @@ OFFER PRICE - <?php echo '$'.OFFER_PRICE?>   <input type='image' src='http://dan
 ALL CHARACTERS | 
 OFFER PRICE - <?php echo '$'.OFFER_PRICE?>   <input type='image' src='http://dangerousmailer.com/images/paypal_buy.gif' class='offer_buy_now'  id='jdsfjdfh'  name='I1' alt="Make payments with PayPal - its fast, free and secure!" width='137' height='57' style="border:none;"/>
 							<img alt='' border='0' src='https://www.paypal.com/en_US/i/scr/pixel.gif' width='1' height='1'> 
-							<span id='span_offer_count'><?php echo getOfferDownloadCounter();?></span>
+							<span id='span_offer_count'><?php echo getOfferDownloadCounter();?> people clicked so far</span>
 							</p>
 </div>
 

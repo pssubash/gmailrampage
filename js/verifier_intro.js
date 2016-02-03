@@ -17,9 +17,35 @@ $(document).ready(function (){
 	callVerifier8 ();
 	setInterval(callVerifier8,1000);
 	
+	callVerifier9 ();
+	setInterval(callVerifier9,1000);
 	
+	callVerifier10 ();
+	setInterval(callVerifier10,1000);
 	
+	callVerifier11 ();
+	setInterval(callVerifier11,1000);
 	
+	callVerifier12 ();
+	setInterval(callVerifier12,1000);
+	
+	callVerifier13 ();
+	setInterval(callVerifier13,1000);
+	
+	callVerifier14 ();
+	setInterval(callVerifier14,1000);
+	
+	callVerifier15 ();
+	setInterval(callVerifier15,1000);
+	
+	callVerifier16 ();
+	setInterval(callVerifier16,1000);
+	
+	callVerifier17 ();
+	setInterval(callVerifier17,1000);
+	
+	callVerifier18 ();
+	setInterval(callVerifier18,1000);
 	
 	callVerifier19();
 	setInterval(callVerifier19,1000);

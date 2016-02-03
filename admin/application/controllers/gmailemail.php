@@ -39,7 +39,7 @@ class GmailEmail extends MY_Controller {
 			$totalPermutaion = $this->modelemail->getTotalPermutaion ( $lettercount );
 			$totalPermutaionAll += $totalPermutaion;
 			$vtotalcount += $vcount;
-			$vcost = $this->config->item ( 'cost_per_valid_email' );
+			$vcost = COST_PER_VALID_EMAIL;
 			$vtotalcost += $vcost;
 			$incount = $this->modelemail->getInvalidEmailsCount ( $lettercount );
 			$itotalcount += $incount;
@@ -49,21 +49,22 @@ class GmailEmail extends MY_Controller {
 			$str .= "<td>" . number_format ( $incount, 0 ) . "</td>";
 			$str .= "<td>" . number_format ( $vcount, 0 ) . "</td>";
 			$str .= "<td>$" . $vcost . "</td>";
-			$str .= "<td>$" . number_format ( $vcount * $vcost, 2, '.', ',' ) . "</td>";
+			$str .= "<td>$" . number_format ( $vcount * $vcost, 4, '.', ',' ) . "</td>";
 			$str .= "<td><a href='viewemail/en/" . $lettercount . "' target='_blank'>View </a>  | ";
 			$str .= "<a href='downloademail/en/" . $lettercount . "' target='_blank'>Download </a></td>";
 			$str .= "</tr>";
+			
 		}
 		
-		$vcost = $this->config->item ( 'cost_per_valid_email' );
+		$vcost = COST_PER_VALID_EMAIL;
 		$str .= "<tr class='totalvalues'>";
 		$str .= "<td><strong>Total</strong></td>";
 		$str .= "<td>" . number_format ( $totalPermutaionAll, 0 ) . "</td>";
 		$str .= "<td>" . number_format ( $itotalcount, 0 ) . "</td>";
 		$str .= "<td>" . number_format ( $vtotalcount, 0 ) . "</td>";
 		
-		$str .= "<td>$" . number_format ( $vcost, 3, '.', ',' ) . "</td>";
-		$str .= "<td>$" . number_format ( $vcost * $vtotalcount, 2, '.', ',' ) . "</td>";
+		$str .= "<td>$" . number_format ( $vcost, 4, '.', ',' ) . "</td>";
+		$str .= "<td>$" . number_format ( $vcost * $vtotalcount, 4, '.', ',' ) . "</td>";
 		$str .= "<td> ";
 		$str .= "<a href='downloademail/en/all/1' target='_blank'>Download </a></td>";
 		$str .= "</tr>";
@@ -114,17 +115,18 @@ class GmailEmail extends MY_Controller {
 				$totalPermutaion += $this->modelemail->getTotalPermutaion ( $lettercount, $charArray [$search] );
 			}
 			$totalPermutaionAll += $totalPermutaion;
-			$vcost = $this->config->item ( 'cost_per_valid_email' );
+			$vcost = COST_PER_VALID_EMAIL;
 			$vtotalcount += $vcount;
 			$vtotalcost += $vcost;
 			$itotalcount += $incount;
+			
 			$str .= "<tr>";
 			$str .= "<td>" . $charArray [$search] . " Character </td>";
 			$str .= "<td>" . number_format ( $totalPermutaion ) . "</td>";
 			$str .= "<td>" . number_format ( $incount ) . "</td>";
 			$str .= "<td>" . number_format ( $vcount ) . "</td>";
-			$str .= "<td>$" . number_format ( $vcost, 3, '.', ',' ) . "</td>";
-			$str .= "<td>$" . number_format ( $vcost * $vcount, 3, '.', ',' ) . "</td>";
+			$str .= "<td>$" . $vcost . "</td>";
+			$str .= "<td>$" . number_format ($vcost * $vcount, 4, '.', ',' ) . "</td>";
 			// $str .= "<td><input type='image' class='class_buynow_char'
 			// id='buynow_" . $vcount . "_" . $lettercount . "_" . $vcost . "_"
 			// . $charArray [$search] . "'
@@ -138,16 +140,18 @@ class GmailEmail extends MY_Controller {
 			$str .= "<td><a href='viewemail/ec/" . $charArray [$search] . "' target='_blank'>View </a>  | ";
 			$str .= "<a href='downloademail/ec/" . $charArray [$search] . "' target='_blank'>Download </a></td>";
 			$str .= "</tr>";
+			//print  (double)COST_PER_VALID_EMAIL;exit;
+			
 		}
 		
-		$vcost = $this->config->item ( 'cost_per_valid_email' );
+		$vcost = COST_PER_VALID_EMAIL;
 		$str .= "<tr class='totalvalues'>";
 		$str .= "<td ><strong>Total</strong></td>";
 		$str .= "<td>" . number_format ( $totalPermutaionAll ) . "</td>";
 		$str .= "<td>" . number_format ( $itotalcount ) . "</td>";
 		$str .= "<td>" . number_format ( $vtotalcount ) . "</td>";
-		$str .= "<td>$" . number_format ( $vcost, 2, '.', ',' ) . "</td>";
-		$str .= "<td>$" . number_format ( $vtotalcount * $vcost, 3, '.', ',' ) . "</td>";
+		$str .= "<td>$" . number_format ( $vcost, 4, '.', ',' ) . "</td>";
+		$str .= "<td>$" . number_format ( $vtotalcount * $vcost, 4, '.', ',' ) . "</td>";
 		$str .= "<td>View | Download</td>";
 		$str .= "</tr>";
 		$str .= "</tbody>";

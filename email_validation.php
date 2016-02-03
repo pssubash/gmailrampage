@@ -169,7 +169,7 @@ class email_validation_class
 		for($host=0;$host<count($hosts);$host++)
 		{
 			$domain=$hosts[$host];
-			if(ereg('^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$',$domain))
+			if(preg_match('^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$',$domain))
 				$ip=$domain;
 			else
 			{

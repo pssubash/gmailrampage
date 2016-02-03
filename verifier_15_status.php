@@ -1,5 +1,5 @@
 <?php
-define("LETTER_COUNT",13);
+define("LETTER_COUNT",15);
 $dbLink = mysql_connect ( "localhost", "gmailram_admin", "yhs&0%1FlT*k" ) or die ( "Error " . mysqli_error ( $dbLink ) );
 mysql_select_db ( "gmailram_dm", $dbLink );
 

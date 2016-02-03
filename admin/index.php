@@ -190,7 +190,11 @@ if (defined('ENVIRONMENT'))
 
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
-
+/**
+ * Loading constatns
+ */
+	require_once '../settings.php';
+	
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
